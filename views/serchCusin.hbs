@@ -1,0 +1,20 @@
+<h1>Restaurant Finder</h1>
+
+  <!-- Form to select cuisine and set page/perPage -->
+  <form method="GET" action="/selectedCusin">
+    <label for="cuisine">Select Cuisine:</label>
+    <select name="cuisine" id="cuisine">
+      <option value="">All Cuisines</option>
+      {{#each cuisines}}
+        <option value="{{this}}">{{this}}</option>
+      {{/each}}
+    </select>
+
+    <label for="page">Page:</label>
+    <input type="number" name="page" id="page" value="1" min="1">
+
+    <label for="perPage">Per Page:</label>
+    <input type="number" name="perPage" id="perPage" value="10" min="1">
+
+    <button type="submit">Filter</button>
+  </form>

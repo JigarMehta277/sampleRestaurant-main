@@ -1,0 +1,44 @@
+<h1>Restaurant List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cuisine</th>
+      <th>Building</th>
+      <th>Coordinates</th>
+      <th>Street</th>
+      <th>Zipcode</th>
+      <th>Borough</th>
+      <th>Grades</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each restaurants}}
+      <tr>
+        <td>{{name}}</td>
+        <td>{{cuisine}}</td>
+        <td>{{address.building}}</td>
+        <td>{{address.coord}}</td>
+        <td>{{address.street}}</td>
+        <td>{{address.zipcode}}</td>
+        <td>{{borough}}</td>
+        <td>
+          <ul>
+            {{#each grades}}
+              <li>Date: {{date}}, Grade: {{grade}}, Score: {{score}}</li>
+            {{/each}}
+          </ul>
+        </td>
+        <td>
+          <a href="/api/restaurants/{{_id}}">Details</a>
+          <a href="/api/restaurants/edit/{{_id}}">Edit</a>
+          <form action="/api/restaurants/{{_id}}" method="post" style="display: inline;">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

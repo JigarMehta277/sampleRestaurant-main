@@ -1,0 +1,27 @@
+
+    <h1>Restaurant Details</h1>
+
+    {{#if message}}
+        <p>{{message}}</p>
+    {{/if}}
+
+    <!-- Display details of the restaurant -->
+    <p><strong>Name:</strong> {{restaurant.name}}</p>
+    <p><strong>Cuisine:</strong> {{restaurant.cuisine}}</p>
+    <p><strong>Building:</strong> {{restaurant.address.building}}</p>
+    <p><strong>Coordinates:</strong> {{restaurant.address.coord}}</p>
+    <p><strong>Street:</strong> {{restaurant.address.street}}</p>
+    <p><strong>Zipcode:</strong> {{restaurant.address.zipcode}}</p>
+    <p><strong>Borough:</strong> {{restaurant.address.borough}}</p>
+    <ul>
+            {{#each restaurant.grades}}
+              <li>Date: {{date}}, Grade: {{grade}}, Score: {{score}}</li>
+            {{/each}}
+          </ul>
+
+
+    <p>
+        <!-- Add navigation links to other pages -->
+        <a href="/api/restaurants/{{_id}}/edit">Edit</a>
+        <a href="/api/restaurants/{{_id}}/delete">Delete</a>
+    </p>

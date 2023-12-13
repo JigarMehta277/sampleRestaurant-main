@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{pageTitle}}</title>
+    <!-- Add your CSS and other head elements here -->
+</head>
+<body>
+    <header>
+        <h1>my Website</h1>
+        <!-- Add navigation or other header content here -->
+    </header>
+
+    <style>
+  nav {
+    background-color: #333;
+    padding: 10px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+</style>
+<nav>
+  {{#each navLinks}}
+    <a href="{{url}}">{{text}}</a>
+  {{/each}}
+</nav>
+
+    <main>
+        {{{body}}}
+    </main>
+
+    <footer>
+        <!-- Add footer content here -->
+        <p>&copy; 2023 my Website</p>
+    </footer>
+</body>
+</html>

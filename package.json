@@ -1,0 +1,26 @@
+{
+  "name": "samplerestaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "Jigar&Chisom",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.9",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "handlebars": "^4.7.8",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.2",
+    "nodemon": "^3.0.1",
+    "passport": "^0.7.0",
+    "path": "^0.12.7"
+  }
+}

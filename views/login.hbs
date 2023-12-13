@@ -1,0 +1,17 @@
+ <h1>User Login</h1>
+
+    {{#if message}}
+        <p>{{message}}</p>
+    {{/if}}
+
+    <form action="/api/login" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+
+     <p>Don't have an account? <a href="/register">Click here to register</a></p>
